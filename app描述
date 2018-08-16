@@ -1,0 +1,144 @@
+存储位置：pid/年/月/日/申请号后4位/申请号(15位,不足前面补0)/文献类型/（年月日为申请年月日）
+修改为：申请号后4位/申请号(15位,不足前面补0)/文献类型/时间戳  更合理？
+pid:申请号_文献类型
+1./c存储每次提交最新版本，/a存储多次修改版本，pid/o存储原始文件，与a和c同级存储zip每个版本的zip文件。
+json结构：
+申请号_文献类型 = {
+        "pid":"11_22", #申请号_文献类型
+        "UpdateNum":3, #树结构修改版本
+        "UpdateTime":"2018-01-01 00:00:00" #树结构修改时间
+        "authCurrentVersion":"" ,#授权当前版本
+        "origin":[{         #原始版，包含多个日期上传的原始案件内容，json数组
+            'date':"2018-01-01 02:02:02",
+            "00001": {      #00001按顺序排序 ，以下为设计1设计2组件1主视图，如果是自定义名字则为一级目录
+                "name": "设计1",
+            },
+            "00002": {
+                "name": "设计2",
+                "pid": "00001"
+            },
+            "00003": {
+                "name": "组件1",
+                "pid": "00002",
+                "imgs": {
+                    "00000":{
+                        "name":"主视图",
+                        "path":"11/22/.../00000.jpg",
+                        "imgUpdateNum":3   #图片修改的版本 （修改图片时需要提交此参数，请添加）
+                    }
+                }
+            },
+            "00004":{
+                "imgs":{
+                    "cc":{
+                        "name": "自定义名字",
+                        "path": "11/22/.../cc.jpg",
+                        "imgUpdateNum": 3
+                    }
+                }
+            }
+        },{
+            "date":"2018-02-02 : hh:mm:ss"
+        }],
+        "lastVersion":[{},{}],  #最新版本，跟origin一样
+        "authVersion": [#授权版本
+            {
+                "authUpdateNum":""  #授权版本号
+                "authUpdateTime":"", #每次授权提交日期
+                "0001":{
+                    "name":"主视图",
+                    "idName":"12345.jpg",
+                    "path":"11/22/../auth/12345.jpg"  #提交版本时只需要把原来的路径提交就行。
+                },
+                "0002":{
+                    "name":"主视图",
+                    "idName":"23456.jpg",
+                    "path":"11/22/../auth/23456.jpg"
+                }
+            }
+        ]
+    }
+
+    申请号_文献类型_history = [history1,history2]
+2.接口描述：
+   ①上传案件接口
+    //caseZip是案件zip包，由图片和xml文件组成。
+	def uploadCase(shenqingh,wxlx,caseZip):
+	        //1.存储zip包到a同级目录，解压zip包到a目录下
+	        //2.存储redis中。根据a目录下的xml进行解析
+    ②查看案件接口
+	def showStruct(pid):
+	      //1.根据pid从Redis获取json结构
+	      return json
+     	def showCase(pid):
+	     //1.第一次从a中获取图片
+                     return 图片；
+
+
+     ③修改案件接口
+              //修改一张图片
+              //imgId图片唯一标识；img_base64图片base64;version修改次数
+              def updateCase(pid,imgId,img_base64,imgName,version):
+                      //写入xml文件pid/c/version.xml
+	      //存储路径pid/c/imgId_version.jpg
+
+	//修改图片名字
+                	xml结构：
+		<imgId></imgId>
+               		<old></old>
+                	<new></new>
+                	<version></version>
+              def updateImgName(pid,imgId,old_name,new_name,version):
+                    //1.写入xml文件
+                    //2. 存储路径 pid /c/version.xml
+
+
+
+              //提交   update_case_zip修改了的图片和图片结构xml???这个上传什么
+               def submitUpdate(pid,update_case_zip):
+	      //1.将a目录下文件压缩并存储，删除a目录下文件
+
+                     //2.将修改的压缩包解压到a目录下
+
+	    //删除c目录下文件
+
+  	     //3.根据a目录下xml更新json
+
+
+
+     ④回退修改案件接口
+
+             def  rollbackPrevUpdate(pid,version):
+                     //version = version -1
+                    //解析pid/c/version.xml若有图片则返回图片
+	    //否则返回图片名
+            def  rollbackNextUpdate():
+
+
+      ⑤回退版本案件接口(?a目录中文件是否需要删除)
+	def rollbackPrevVersion(pid):
+                      //1.查找上一个zip文件
+
+                     //2.解压到a目录下(?以前文件是否需要删除)
+
+	     //3.更新redis中json
+
+                     return json
+
+	def rollbackNextVersion(pid):
+
+
+
+流程描述：
+    ①上传：以json结构+图片和xml结构+图片的方式上传
+       1.保存图片到/o
+       2.解析结构->json并保存到redis
+
+
+
+
+
+
+
+
+

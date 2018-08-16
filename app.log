@@ -1,1 +1,23 @@
-2018-06-21 16:56:27,895 INFO    : hello
+2018-07-23 14:59:56,578 INFO    : param is None or dir is not exists
+2018-07-23 15:38:37,811 INFO    : response: <Response 49 bytes [401 UNAUTHORIZED]>
+2018-07-23 15:40:37,763 INFO    : InvalidUsage info : {'message': 'copyDir @ get param exception'}
+2018-07-23 15:59:42,153 INFO    : InvalidUsage info : {'message': 'copyDir @ dir is not exist'}
+2018-07-26 15:44:48,078 INFO    : download start
+2018-07-26 16:25:32,673 INFO    : download start
+2018-07-26 16:33:57,207 INFO    : download start
+2018-07-26 19:17:59,464 INFO    : Traceback (most recent call last):
+  File "E:\python\image_storage\app.py", line 368, in saveSingleImg
+    file.save(filePath)
+  File "E:\tool\python\install27_32\lib\site-packages\werkzeug\datastructures.py", line 2725, in save
+    dst = open(dst, 'wb')
+IOError: [Errno 13] Permission denied: u'static/image2/abc.jpg'
+
+2018-07-26 19:19:27,226 INFO    : Traceback (most recent call last):
+  File "E:\python\image_storage\app.py", line 370, in saveSingleImg
+    file.save(filePath)
+  File "E:\tool\python\install27_32\lib\site-packages\werkzeug\datastructures.py", line 2725, in save
+    dst = open(dst, 'wb')
+IOError: [Errno 13] Permission denied: u'static/image2/abc.jpg'
+
+2018-08-02 12:45:32,858 INFO    : ftp url : ftp://efsftp_w:123456@10.1.10.229:21/20180719/13/494306658.zip
+2018-08-08 17:01:36,595 INFO    : [{'path': u'/000001.jpg', 'rotateDesc': {}, 'imgUpdateNum': 0, 'ori_name': '\xe4\xb8\xbb\xe8\xa7\x86\xe5\x9b\xbe', 'name': '\xe4\xb8\xbb\xe8\xa7\x86\xe5\x9b\xbe'}, {'path': u'/000002.jpg', 'rotateDesc': {}, 'imgUpdateNum': 0, 'ori_name': '\xe4\xbf\xaf\xe8\xa7\x86\xe5\x9b\xbe', 'name': '\xe4\xbf\xaf\xe8\xa7\x86\xe5\x9b\xbe'}, {'path': u'/000003.jpg', 'rotateDesc': {}, 'imgUpdateNum': 0, 'ori_name': '\xe5\x8f\xb3\xe8\xa7\x86\xe5\x9b\xbe', 'name': '\xe5\x8f\xb3\xe8\xa7\x86\xe5\x9b\xbe'}, {'path': u'/000004.jpg', 'rotateDesc': {}, 'imgUpdateNum': 0, 'ori_name': '\xe7\xab\x8b\xe4\xbd\x93\xe5\x9b\xbe', 'name': '\xe7\xab\x8b\xe4\xbd\x93\xe5\x9b\xbe'}]
