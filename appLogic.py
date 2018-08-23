@@ -47,16 +47,18 @@ def getZipFilePath(case):
     user, passwd, host, port, fileName = getFtpInfo(url)
     fileIndex = fileName.rfind('/')
     fileName2 = fileName[fileIndex + 1:]
-    utils.createOriginDir(shenqingh, documentType, submitDate, fid)
+    # utils.createOriginDir(shenqingh, documentType, submitDate, fid)
     fileDir = utils.getOriginBasePath(shenqingh, documentType, submitDate, fid)
-    return fileDir + '/' + fileName2
+    currentDir = utils.getModifyBasePath(shenqingh,documentType,submitDate,fid)
+    return currentDir,fileDir,fileDir + '/' + fileName2
+
+
 
 def ftpDownload(case):
     shenqingh = case['shenqingh']
     documentType = case['wenjianlx']
     fid = case['fid']
     url = case['url']
-    logger.info("ftp url : " + str(url))
     submitDate = case['submitDate']
     user, passwd, host, port, fileName = getFtpInfo(url)
     fileIndex = fileName.rfind('/')
@@ -65,38 +67,42 @@ def ftpDownload(case):
     utils.createOriginDir(shenqingh,documentType,submitDate,fid)
     fileDir = utils.getOriginBasePath(shenqingh, documentType, submitDate, fid)
     file = fileDir + '/'+ fileName2
-    if not os.path.isfile(file):
-        try:
-            #1.下载
-            ftp.connect(host, int(port))
-            ftp.login(user,passwd)
-            with open(file,'wb') as f:
-                try:
-                    ftp.retrbinary('RETR ' + fileName, f.write)
-                    logger.info('download zipfile: ' + file)
-                except Exception as e:
-                    logger.info(traceback.format_exc())
-            #2.解压到原始目录下
-            utils.unzip(file,fileDir)
-            #3.删除压缩包
-            #4.将原始目录中的图片生成缩略图到原图同一文件夹下
-            for thumb in thumbSizeList:
-                thrumbImgs(fileDir, fileDir, thumb[0], thumb[1])
-            # #5.复制原始目录到当前版目录下
-            utils.createModifyDir(shenqingh,documentType,submitDate,fid)
-            modifyPath = utils.getModifyBasePath(shenqingh,documentType,submitDate,fid)
-            copyDir(fileDir,modifyPath)
-        except Exception as e:
-            #发生异常后将下载的压缩包、解压的文件夹和复制的文件夹进行删除
-            originDir = fileDir
-            currentDir = fileDir.replace('/'+originDirName +'/','/' + modifyDirName + '/')
-            if os.path.exists(originDir):
-                shutil.rmtree(originDir)
-            if os.path.exists(currentDir):
-                shutil.rmtree(currentDir)
-            logger.info(traceback.format_exc())
-        finally:
-            ftp.quit()
+    try:
+        #1.下载
+        ftp.connect(host, int(port))
+        ftp.login(user,passwd)
+        with open(file,'wb') as f:
+            ftp.retrbinary('RETR ' + fileName, f.write)
+        #2.解压到原始目录下
+        utils.unzip(file,fileDir)
+        #验证xml文件是否唯一
+        files = glob.glob(fileDir + '/*.xml')
+        if len(files) != 1:
+            logger.info("xml文件个数不为1")
+            if os.path.exists(fileDir):
+                shutil.rmtree(fileDir)
+            return False
+        #3.删除压缩包
+        #4.将原始目录中的图片生成缩略图到原图同一文件夹下
+        for thumb in thumbSizeList:
+            thrumbImgs(fileDir, fileDir, thumb[0], thumb[1])
+        # #5.复制原始目录到当前版目录下
+        utils.createModifyDir(shenqingh,documentType,submitDate,fid)
+        modifyPath = utils.getModifyBasePath(shenqingh,documentType,submitDate,fid)
+        copyDir(fileDir,modifyPath)
+        ftp.quit()
+        return True
+    except Exception as e:
+        #发生异常后将下载的压缩包、解压的文件夹和复制的文件夹进行删除
+        originDir = fileDir
+        currentDir = fileDir.replace('/'+originDirName +'/','/' + modifyDirName + '/')
+        if os.path.exists(originDir):
+            shutil.rmtree(originDir)
+        if os.path.exists(currentDir):
+            shutil.rmtree(currentDir)
+        logger.info(traceback.format_exc())
+        return False
+
 
 def parseXmlToJson(case):
     originJson = {}
@@ -107,34 +113,36 @@ def parseXmlToJson(case):
     #获取xml文件名
     path = utils.getOriginBasePath(shenqingh,documentType, submitDate, fid)
     files = glob.glob(path + '/*.xml')
-    if len(files) > 0:
-        xmlName = os.path.basename(files[0])
-        logger.info("parse xml name : " + xmlName)
-        if os.path.isfile(path + '/' +xmlName):
-            #1.读取xml文件
-            xmldoc = minidom.parse(path + '/' + xmlName)
-            itemlist = xmldoc.getElementsByTagName('picture')
-            originJson['date'] = submitDate
-            originJson['fid'] = fid
-            data = []
-            noticePath = ''
-            flag = True #若找到公示图则为False
-            for item in itemlist:
-                child = {}
-                child['ori_name'] = item.attributes['origin_name'].value.encode('utf-8')
-                child['path'] = ipPort + path + '/' + item.attributes['picture_no'].value + '.jpg'
-                child['imgUpdateNum'] = 0
-                keys = extractWord(item.attributes['origin_name'].value)
-                child['name'] = keys[-1]
-                child['rotateDesc'] = {}
-                #2.解析xml to json
-                toOriginJson(data,keys,child)
-                #3.处理公示图
-                if flag:
-                    flag, flag2 = getNoticePath(keys[-1])
-                    if flag2:
-                        noticePath = child['path']
-            originJson['data'] = data
+    noticePath = ''
+    if len(files) != 1:
+        logger.info(str(case) + "xml文件个数不为1")
+        shutil.rmtree(path)
+        return originJson,noticePath
+    xmlName = os.path.basename(files[0])
+    if os.path.isfile(path + '/' +xmlName):
+        #1.读取xml文件
+        xmldoc = minidom.parse(path + '/' + xmlName)
+        itemlist = xmldoc.getElementsByTagName('picture')
+        originJson['date'] = submitDate
+        originJson['fid'] = fid
+        data = []
+        flag = True #若找到公示图则为False
+        for item in itemlist:
+            child = {}
+            child['ori_name'] = item.attributes['origin_name'].value.encode('utf-8')
+            child['path'] = ipPort + path + '/' + item.attributes['picture_no'].value + '.jpg'
+            child['imgUpdateNum'] = 0
+            keys = extractWord(item.attributes['origin_name'].value)
+            child['name'] = keys[-1]
+            child['rotateDesc'] = {}
+            #2.解析xml to json
+            toOriginJson(data,keys,child)
+            #3.处理公示图
+            if flag:
+                flag, flag2 = getNoticePath(keys[-1])
+                if flag2:
+                    noticePath = child['path']
+        originJson['data'] = data
     return originJson, noticePath
 
 
@@ -243,7 +251,6 @@ def thrumbImgs(srcImgPath,desImgPath,weight,height):
     :param desImgPath:
     :return:
     '''
-    logger.info('thrumb src: ' + srcImgPath + ", des: " + desImgPath)
     size = (weight, height)
     files = os.listdir(srcImgPath)
     for file in files:
@@ -319,6 +326,10 @@ def parsePath(path):
     imgName = datas[-1]
     return date, fid, imgName
 
+
+#验证服务器中是否存在图片
+def validRedisInfo(data):
+    pass
 
 
 if __name__=="__main__":

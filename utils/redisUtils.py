@@ -29,3 +29,6 @@ def getHashField(client,key,field):
 def getHashValues(client,key):
     return client.hgetall(key)
 
+def deleteKey(client,key):
+    client.delete(key)
+

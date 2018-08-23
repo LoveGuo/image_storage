@@ -38,10 +38,16 @@ def thumbImgs():
 
 #test
 def getOriginImgs():
+    # 2017301167196 sqh
+    #
+    # 130001 documentType
+    #
+    # GD000126680358 fid
     url = 'http://10.75.13.114:5000/getOriginImgs'
     data = {
-        'shenqingh': "201830064781X",
-        'wenjianlx': '130001'
+        'shenqingh': "2017301167196",
+        'wenjianlx': '130001',
+        'fid':'DA000126680358'
     }
     res = requests.post(url,data)
     result = json.loads(res.text)
@@ -60,11 +66,28 @@ def loaddata():
     print cur
 
 
+def uploadAuthImgs():
+    url = 'http://10.75.13.114:5000/uploadAuthImgs'
+    headers = {'Content-Type': 'application/json'}
+    data1 = {
+        "shenqingh":"2015304108218",
+        "wenjianlx":"130001",
+        "fid":"GY000003031250",
+        "url":"ftp://efsftp_w:go123456@10.1.10.111:21/20180814/10/351393022.zip",
+        "urltype":"0",
+        "submitDate":"2018-08-17 16:16:59"
+    }
+    res = requests.post(url=url,headers=headers,data=json.dumps(data1))
+    cur = res.text
+    print cur
+
+
 if __name__=="__main__":
     # hello()
     # upload()
     # saveSingleImg()
     # saveImgs()
     # savecreate()
-    # getOriginImgs()
-    loaddata()
+    getOriginImgs()
+    # loaddata()
+    # uploadAuthImgs()

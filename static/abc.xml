@@ -1,1 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8"?><design-picture fid="AB000000000002114203" version="1" file_type="130001" submit_date="20110503" receive_date="20110503" origin_fid="SB000005265841" filing_no="2011300372514" pic_count="4" page_count="1" deposit_no="" tag="" location="20110504\111803075112-H\2011300372514\SB000005265841" format=""><picture picture_name="主视图" picture_no="000001" picture_type="jpg" origin_name="主视图" origin_picture_page="1" /><picture picture_name="俯视图" picture_no="000002" picture_type="jpg" origin_name="俯视图" origin_picture_page="1" /><picture picture_name="右视图" picture_no="000003" picture_type="jpg" origin_name="右视图" origin_picture_page="1" /><picture picture_name="立体图" picture_no="000004" picture_type="jpg" origin_name="立体图" origin_picture_page="1" /></design-picture>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<authorization>
+  <image>
+    <physical-name>000001.jpg</physical-name>
+    <logical-name>主视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000002.jpg</physical-name>
+    <logical-name>后视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000003.jpg</physical-name>
+    <logical-name>左视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000004.jpg</physical-name>
+    <logical-name>右视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000005.jpg</physical-name>
+    <logical-name>俯视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000006.jpg</physical-name>
+    <logical-name>立体图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000007.jpg</physical-name>
+    <logical-name>使用状态参考图1</logical-name>
+    <fengpi-flag>1</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000008.jpg</physical-name>
+    <logical-name>使用状态参考图2</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000009.jpg</physical-name>
+    <logical-name>使用状态参考图3</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+</authorization>

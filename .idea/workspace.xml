@@ -2,35 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418666da-b682-4cf8-8c85-cf2fb3b2c031" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appClient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appLogic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_bat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app描述" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/copyImgs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterData/dataMigrate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterData/test/webServiceTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moveImage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/abc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/abc~1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/def.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/image/130001.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/image/abc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/image/efg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/image/test.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testXMLParse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/imgUtils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/parseUtils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/redisUtils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/timeUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/image_storage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/image_storage.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrateLogic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/appLogic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterData/dataMigrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/enterData/dataMigrate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterData/test/webServiceTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/enterData/test/webServiceTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/abc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/static/abc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/abc.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/abc~1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/abc~1_50_50.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/def.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image/130001.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image/abc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image/abc_210_210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image/efg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image/efg_210_210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image/test.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image2/130001.xml" beforeDir="false" afterPath="$PROJECT_DIR$/static/efg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image2/abc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/image2/haha.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/redisUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/redisUtils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,19 +37,21 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/image_storage$parseUtils.coverage" NAME="parseUtils Coverage Results" MODIFIED="1532926857477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/image_storage$copyImgs.coverage" NAME="copyImgs Coverage Results" MODIFIED="1532061606177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_storage$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1534816494427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_for_appClient_testThumbImgs.coverage" NAME="Twisted Trial for appClient.testThumbImgs Coverage Results" MODIFIED="1532311849182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$test.coverage" NAME="test Coverage Results" MODIFIED="1533708890635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$moveImage.coverage" NAME="moveImage Coverage Results" MODIFIED="1534239009170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$appClient.coverage" NAME="appClient Coverage Results" MODIFIED="1532334596822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_storage$webServiceTest.coverage" NAME="webServiceTest Coverage Results" MODIFIED="1534382196091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData/test" />
-    <SUITE FILE_PATH="coverage/image_storage$dataMigrate.coverage" NAME="dataMigrate Coverage Results" MODIFIED="1534325732404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData" />
+    <SUITE FILE_PATH="coverage/image_storage$webServiceTest.coverage" NAME="webServiceTest Coverage Results" MODIFIED="1534749594641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData/test" />
+    <SUITE FILE_PATH="coverage/image_storage$migrateLogic.coverage" NAME="migrateLogic Coverage Results" MODIFIED="1534398382652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_storage$dataMigrate.coverage" NAME="dataMigrate Coverage Results" MODIFIED="1534739594673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_in_appClient_py.coverage" NAME="Twisted Trial in appClient.py Coverage Results" MODIFIED="1532311779838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$imgUtils.coverage" NAME="imgUtils Coverage Results" MODIFIED="1531451465019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/image_storage$testXMLParse.coverage" NAME="testXMLParse Coverage Results" MODIFIED="1533718896306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$config.coverage" NAME="config Coverage Results" MODIFIED="1531454267908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$appLogic.coverage" NAME="appLogic Coverage Results" MODIFIED="1533704475873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_storage$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1533608214499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/image_storage$client.coverage" NAME="client Coverage Results" MODIFIED="1533706986491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_storage$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1534834512394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/image_storage$client.coverage" NAME="client Coverage Results" MODIFIED="1534835965901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$image_storage.coverage" NAME="image_storage Coverage Results" MODIFIED="1529571206250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_for_client_testThumbImgs.coverage" NAME="Twisted Trial for client.testThumbImgs Coverage Results" MODIFIED="1532311976865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_in_copyImgs_py.coverage" NAME="Twisted Trial in copyImgs.py Coverage Results" MODIFIED="1534238550072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -65,8 +62,8 @@
       <file leaf-file-name="dataMigrate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enterData/dataMigrate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="40" column="86" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
+            <state relative-caret-position="302">
+              <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
               <folding>
                 <element signature="e#22#52#0" expanded="true" />
               </folding>
@@ -77,22 +74,27 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="339" selection-start-line="339" selection-end-line="339" />
+            <state relative-caret-position="3346">
+              <caret line="444" column="26" lean-forward="true" selection-start-line="444" selection-start-column="26" selection-end-line="444" selection-end-column="26" />
               <folding>
-                <element signature="e#576#1004#0" />
-                <element signature="e#1076#1176#0" />
-                <element signature="e#1212#1228#0" />
-                <element signature="e#1294#3907#0" />
-                <element signature="e#3984#4773#0" />
-                <element signature="e#4840#6148#0" />
-                <element signature="e#6217#8609#0" />
-                <element signature="e#8677#9731#0" />
-                <element signature="e#9800#11008#0" />
-                <element signature="e#11082#12316#0" />
-                <element signature="e#12387#13084#0" />
-                <element signature="e#13158#14350#0" />
+                <element signature="e#22#35#0" expanded="true" />
+                <element signature="e#4445#5234#0" />
+                <element signature="e#5301#6460#0" />
+                <element signature="e#6529#8921#0" />
+                <element signature="e#8989#10043#0" />
+                <element signature="e#10112#11320#0" />
+                <element signature="e#11394#13086#0" />
+                <element signature="e#13157#13854#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -100,10 +102,52 @@
       <file leaf-file-name="appLogic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appLogic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1767">
-              <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+            <state relative-caret-position="4674">
+              <caret line="253" column="27" selection-start-line="253" selection-start-column="27" selection-end-line="253" selection-end-column="27" />
               <folding>
                 <element signature="e#22#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="migrateLogic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migrateLogic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4807">
+              <caret line="264" column="4" selection-start-line="264" selection-start-column="4" selection-end-line="264" selection-end-column="4" />
+              <folding>
+                <element signature="e#22#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="redisUtils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/redisUtils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#22#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,10 +156,10 @@
       <file leaf-file-name="webServiceTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enterData/test/webServiceTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="912">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
               <folding>
-                <element signature="e#22#38#0" expanded="true" />
+                <element signature="e#22#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,22 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>caption/abstract</find>
-      <find>note</find>
-      <find>getKey</find>
-      <find>getkey</find>
-      <find>25/201705/24216872.JPG</find>
-      <find>iptcinfo</find>
-      <find>getCurrentYMD</find>
-      <find>iptc</find>
-      <find>['submitDate']</find>
-      <find>save</find>
-      <find>SaveStrValue</find>
-      <find>update</find>
-      <find>files</find>
-      <find>file.save</find>
-      <find>saveSingleImg</find>
-      <find>glob.glob</find>
       <find>UNZIP</find>
       <find>InvalidUsage</find>
       <find>getHashField</find>
@@ -163,7 +191,26 @@
       <find>transfercmd()</find>
       <find>logger</find>
       <find>set</find>
+      <find>authPath</find>
+      <find>uploadAuthImgs</find>
+      <find>createOrReplaceAuthDir</find>
+      <find>redisutils.set</find>
+      <find>insertExceptionTable</find>
+      <find>code</find>
+      <find>end</find>
+      <find>getDate</find>
+      <find>fetchone</find>
+      <find>fetch</find>
+      <find>authJson</find>
+      <find>*</find>
+      <find>delete</find>
+      <find>deleteAuthDir</find>
+      <find>redisUtils</find>
+      <find>申请号</find>
     </findStrings>
+    <replaceStrings>
+      <replace>statuscode</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,19 +230,22 @@
         <option value="$PROJECT_DIR$/app.log" />
         <option value="$PROJECT_DIR$/appClient.py" />
         <option value="$PROJECT_DIR$/app_bat.py" />
-        <option value="$PROJECT_DIR$/client.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/appLogic.py" />
         <option value="$PROJECT_DIR$/utils/utils.py" />
-        <option value="$PROJECT_DIR$/utils/redisUtils.py" />
         <option value="$PROJECT_DIR$/testXMLParse.py" />
         <option value="$PROJECT_DIR$/utils/parseUtils.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/copyImgs.py" />
         <option value="$PROJECT_DIR$/moveImage.py" />
-        <option value="$PROJECT_DIR$/enterData/dataMigrate.py" />
+        <option value="$PROJECT_DIR$/enterData/migrateLogic.py" />
+        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/enterData/test/webServiceTest.py" />
+        <option value="$PROJECT_DIR$/utils/redisUtils.py" />
+        <option value="$PROJECT_DIR$/test2.py" />
+        <option value="$PROJECT_DIR$/client.py" />
+        <option value="$PROJECT_DIR$/appLogic.py" />
+        <option value="$PROJECT_DIR$/migrateLogic.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/enterData/dataMigrate.py" />
       </list>
     </option>
   </component>
@@ -220,6 +270,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="image_storage" type="cbb8eebc:String" user="image_storage" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,16 +288,21 @@
               <item name="image_storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="image_storage" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="image_storage" type="cbb8eebc:String" user="image_storage" />
+              <item name="image_storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="image_storage" type="462c0819:PsiDirectoryNode" />
+              <item name="enterData" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="image_storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="image_storage" type="462c0819:PsiDirectoryNode" />
+              <item name="enterData" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="image_storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="image_storage" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -251,14 +317,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\python\image_storage" />
-      <recent name="E:\python\image_storage\static" />
-      <recent name="E:\python\image_storage\lib" />
-      <recent name="E:\python\image_storage\static\image" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\python\image_storage" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\python\image_storage\static" />
+      <recent name="E:\python\image_storage" />
+      <recent name="E:\python\image_storage\lib" />
+      <recent name="E:\python\image_storage\static\image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -273,7 +339,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.webServiceTest">
+  <component name="RunManager" selected="Python.client">
+    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="image_storage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="dataMigrate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="image_storage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -293,7 +378,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="moveImage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="image_storage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -306,26 +391,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/moveImage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="testXMLParse" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="image_storage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testXMLParse.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,6 +416,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
+      <module name="image_storage" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+    </configuration>
     <configuration name="image_storage" type="Python.FlaskServer" factoryName="Flask server">
       <module name="image_storage" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -364,35 +444,21 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="launchJavascriptDebuger" value="false" />
     </configuration>
-    <configuration name="Twisted Trial in copyImgs.py" type="tests" factoryName="Twisted Trial" temporary="true" nameIsGenerated="true">
-      <module name="image_storage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/copyImgs.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <list>
       <item itemvalue="Flask server.image_storage" />
-      <item itemvalue="Python.testXMLParse" />
-      <item itemvalue="Python tests.Twisted Trial in copyImgs.py" />
-      <item itemvalue="Python.moveImage" />
       <item itemvalue="Python.webServiceTest" />
       <item itemvalue="Python.dataMigrate" />
+      <item itemvalue="Python.test2" />
+      <item itemvalue="Python.client" />
+      <item itemvalue="Flask server.Flask (app.py)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.client" />
+        <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Python.test2" />
         <item itemvalue="Python.webServiceTest" />
         <item itemvalue="Python.dataMigrate" />
-        <item itemvalue="Python.moveImage" />
-        <item itemvalue="Python tests.Twisted Trial in copyImgs.py" />
-        <item itemvalue="Python.testXMLParse" />
       </list>
     </recent_temporary>
   </component>
@@ -431,15 +497,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.096296296" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19240098" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22962964" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.45185184" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19078416" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -458,24 +525,24 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21827" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16734034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3776596" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31666666" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32037038" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26666668" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17021276" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.1" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.5106383" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +556,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/appLogic.py</url>
-          <line>165</line>
+          <line>173</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -504,12 +571,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/appLogic.py</url>
-          <line>312</line>
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/appLogic.py</url>
-          <line>141</line>
+          <line>149</line>
           <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -518,33 +580,10 @@
           <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="127" />
+      <option name="time" value="130" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/z_cs_tpsbjksj_data.csv" />
-    <entry file="file://$PROJECT_DIR$/app描述">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2527">
-          <caret line="133" column="16" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1565719173/_io.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="717" column="42" lean-forward="true" selection-start-line="717" selection-start-column="13" selection-end-line="717" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/triplet_val.txt" />
-    <entry file="file://E:/tool/python/install27_32/Lib/shutil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2177">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/triplet_val-25.txt" />
     <entry file="file://$PROJECT_DIR$/static/image/gfh.jpg" />
     <entry file="file://$PROJECT_DIR$/Entity/ImgInfo.py" />
@@ -597,13 +636,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/image/130001.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/image/130001.xml" />
     <entry file="file://E:/tool/python/install27_32/Lib/site-packages/requests/adapters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -644,47 +677,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/abc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/def.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/def.xml" />
     <entry file="file://E:/tool/python/install27_32/Lib/site-packages/PIL/Image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38437">
           <caret line="2027" column="46" selection-start-line="2027" selection-start-column="39" selection-end-line="2027" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
-          <folding>
-            <element signature="e#22#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/redisUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -702,18 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="98" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="72" column="17" lean-forward="true" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="e#22#43#0" expanded="true" />
-            <element signature="e#271#1122#0" />
-            <element signature="e#1140#1448#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -746,16 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appLogic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
-          <folding>
-            <element signature="e#22#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/tool/python/install27_32/Lib/site-packages/DBUtils/PooledDB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6061">
@@ -770,43 +745,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="72" column="17" lean-forward="true" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding>
+            <element signature="e#22#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/efg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/tool/python/install27_32/Lib/xml/dom/minidom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3273">
+          <caret line="1731" column="44" lean-forward="true" selection-start-line="1731" selection-start-column="44" selection-end-line="1731" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/tool/python/install27_32/Lib/site-packages/requests/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="105" column="64" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/abc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterData/test/webServiceTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding>
+            <element signature="e#22#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding>
+            <element signature="e#22#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/redisUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#22#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4674">
+          <caret line="253" column="27" selection-start-line="253" selection-start-column="27" selection-end-line="253" selection-end-column="27" />
+          <folding>
+            <element signature="e#22#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrateLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4807">
+          <caret line="264" column="4" selection-start-line="264" selection-start-column="4" selection-end-line="264" selection-end-column="4" />
+          <folding>
+            <element signature="e#22#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/enterData/dataMigrate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="40" column="86" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
+        <state relative-caret-position="302">
+          <caret line="246" lean-forward="true" selection-start-line="246" selection-end-line="246" />
           <folding>
             <element signature="e#22#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/test/webServiceTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#22#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="339" selection-start-line="339" selection-end-line="339" />
+        <state relative-caret-position="3346">
+          <caret line="444" column="26" lean-forward="true" selection-start-line="444" selection-start-column="26" selection-end-line="444" selection-end-column="26" />
           <folding>
-            <element signature="e#576#1004#0" />
-            <element signature="e#1076#1176#0" />
-            <element signature="e#1212#1228#0" />
-            <element signature="e#1294#3907#0" />
-            <element signature="e#3984#4773#0" />
-            <element signature="e#4840#6148#0" />
-            <element signature="e#6217#8609#0" />
-            <element signature="e#8677#9731#0" />
-            <element signature="e#9800#11008#0" />
-            <element signature="e#11082#12316#0" />
-            <element signature="e#12387#13084#0" />
-            <element signature="e#13158#14350#0" />
+            <element signature="e#22#35#0" expanded="true" />
+            <element signature="e#4445#5234#0" />
+            <element signature="e#5301#6460#0" />
+            <element signature="e#6529#8921#0" />
+            <element signature="e#8989#10043#0" />
+            <element signature="e#10112#11320#0" />
+            <element signature="e#11394#13086#0" />
+            <element signature="e#13157#13854#0" />
           </folding>
         </state>
       </provider>

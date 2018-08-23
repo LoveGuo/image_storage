@@ -27,3 +27,6 @@ ipPort = 'http://10.75.13.114:50003'
 modifyDirName = 'a'
 originDirName = 'o'
 authDirName = 'c'
+
+#入库使用
+authPath = '/data/storage/auth/'
