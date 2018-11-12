@@ -39,5 +39,6 @@ def xmlParse():
     originJson['data'] = data
     logger.info(data)
 
+
 if __name__=='__main__':
     xmlParse()

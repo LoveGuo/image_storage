@@ -127,7 +127,7 @@ def traversalChildren(dataList,imgId,pic_version,rotate_desc):
             elif rotateDescDict.has_key(pic_version):
                 rotateDescDict[str(l['imgUpdateNum'])] = rotateDescDict[pic_version]
                 rotateInfo = rotateDescDict[pic_version]
-            path = l['path'].replace(config.ipPort,'').replace('.','~' + str(l['imgUpdateNum']) + '.')
+            path = l['path'].replace('.','~' + str(l['imgUpdateNum']) + '.')
             return path,rotateInfo
 
 

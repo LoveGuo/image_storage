@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<authorization>
+  <image>
+    <physical-name>000001.jpg</physical-name>
+    <logical-name>套件1主视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000002.jpg</physical-name>
+    <logical-name>套件1后视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000003.jpg</physical-name>
+    <logical-name>套件1左视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000004.jpg</physical-name>
+    <logical-name>套件1右视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000005.jpg</physical-name>
+    <logical-name>套件1俯视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000006.jpg</physical-name>
+    <logical-name>套件1仰视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000007.jpg</physical-name>
+    <logical-name>套件1立体图</logical-name>
+    <fengpi-flag>1</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000008.jpg</physical-name>
+    <logical-name>套件2主视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000009.jpg</physical-name>
+    <logical-name>套件2后视图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+  <image>
+    <physical-name>000010.jpg</physical-name>
+    <logical-name>套件2立体图</logical-name>
+    <fengpi-flag>0</fengpi-flag>
+  </image>
+</authorization>

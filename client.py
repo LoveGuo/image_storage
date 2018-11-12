@@ -56,9 +56,22 @@ def getOriginImgs():
 
 
 def loaddata():
+    url = 'http://10.50.167.111:5000/image/load'
+    # url = 'http://10.75.13.114:5000/image/load'
+    data = {
+        'shenqingh': "200930184445X",
+        'wenjianlx': '130001'
+    }
+    res = requests.post(url, data)
+    cur = res.text
+    print cur
+
+
+
+def getCurrentData():
     url = 'http://10.75.13.114:5000/getCurrentData'
     data = {
-        'shenqingh': "2017301021508",
+        'shenqingh': "201830198902X",
         'wenjianlx': '130001'
     }
     res = requests.post(url, data)
@@ -88,6 +101,7 @@ if __name__=="__main__":
     # saveSingleImg()
     # saveImgs()
     # savecreate()
-    getOriginImgs()
+    # getOriginImgs()
     # loaddata()
     # uploadAuthImgs()
+    getCurrentData()

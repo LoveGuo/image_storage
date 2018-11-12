@@ -64,18 +64,21 @@ def createOriginDir(shenqingh,documentType,submitDate,fid):
     path = getOriginBasePath(shenqingh,documentType,submitDate,fid)
     if not os.path.exists(path):
         os.makedirs(path)
+    return path
 
 
 def createModifyDir(shenqingh,documentType,submitDate,fid):
     path = getModifyBasePath(shenqingh,documentType,submitDate,fid)
     if not os.path.exists(path):
         os.makedirs(path)
+    return path
 
 
 def createAuthDir(shenqingh,documentType,submitDate,fid):
     path = getAuthBasePath(shenqingh,documentType,submitDate,fid)
     if not os.path.exists(path):
         os.makedirs(path)
+    return path
 
 
 # def createThumbDir(shenqingh,documentType,submitDate,fid):
@@ -86,16 +89,22 @@ def createAuthDir(shenqingh,documentType,submitDate,fid):
 
 def unzip(file,unZipPath):
     """解压zip文件到"""
-    zip_file = zipfile.ZipFile(file)
-    if not os.path.exists(unZipPath):
-        os.makedirs(unZipPath)
+    success = False
     try:
+        zip_file = zipfile.ZipFile(file)
+        if not os.path.exists(unZipPath):
+            os.makedirs(unZipPath)
         for name in zip_file.namelist():
             zip_file.extract(name,unZipPath+"/")
+        success = True
     except Exception as e:
         logger.info(traceback.format_exc())
     finally:
         zip_file.close()
+        return success
+
+
+
 
 
 

@@ -10,22 +10,20 @@ from PIL import Image, ImageFile
 
 from config import ipPort, authPath
 from config import logger, thumbSizeList
-from utils import utils
+from utils import utils,oracleUtils
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
-def ftpDownload(client,case):
+def ftpDownload(case):
     '''
     入库授权路径：storage/auth/year/month/day/hour/申请号/文献类型/abc.zip
     :param case:
     :return:
     '''
-    flag = True
     shenqingh = case['shenqingh']
     documentType = case['wenjianlx']
     fid = case['fid']
     url = case['url']
-    logger.info("ftp url : " + str(url))
     submitDate = case['submitDate']
     user, passwd, host, port, fileName = getFtpInfo(url)
     fileIndex = fileName.rfind('/')
@@ -34,8 +32,6 @@ def ftpDownload(client,case):
     try:
         #1.创建授权文件夹
         fileDir = getAuthDir(shenqingh, documentType, submitDate, fid)
-        if not os.path.exists(fileDir):
-            os.makedirs(fileDir)
         file = fileDir + '/'+ fileName2
         #1.下载
         ftp.connect(host, int(port))
@@ -44,29 +40,36 @@ def ftpDownload(client,case):
             ftp.retrbinary('RETR ' + fileName, f.write)
         ftp.quit()
         #2.解压到原始目录下
-        logger.info("解压")
-        utils.unzip(file,fileDir)
+        success = utils.unzip(file,fileDir)
+        if success == 0:
+            return False
         files = glob.glob(fileDir + '/*.xml')
         if len(files) != 1:
-            logger.info("xml文件个数不为1,删除目录，路径为：" + fileDir)
+            logger.info("shenqingh" + str(shenqingh) + ",xml文件个数不为1,删除目录，路径为：" + fileDir)
             if os.path.exists(fileDir):
                 shutil.rmtree(fileDir)
             return False
         #3.删除压缩包
         #4.将原始目录中的图片生成缩略图到原图同一文件夹下
-        logger.info("缩略图")
         for thumb in thumbSizeList:
             thrumbImgs(fileDir, fileDir, thumb[0], thumb[1])
-        return True
     except Exception as e:
-        #发生异常后将下载的压缩包进行删除
-        if os.path.exists(fileDir):
-            shutil.rmtree(fileDir)
-        logger.info(traceback.format_exc() + '---' + str(case))
+        logger.info("shenqingh download exception: " + str(shenqingh) + traceback.format_exc() + '---' + str(case))
         return False
+    return True
+
+#根据case下载文件
+def deleteAuthAll(case):
+    shenqingh = case['shenqingh']
+    documentType = case['wenjianlx']
+    submitDate = case['submitDate']
+    fid = case['fid']
+    path = getAuthDir(shenqingh, documentType, submitDate, fid)
+    if os.path.exists(path):
+        shutil.rmtree(path)
 
 
-def parseXmlToJson(case):
+def parseXmlToJson(case,picnameDict):
     result = {}
     shenqingh = case['shenqingh']
     documentType = case['wenjianlx']
@@ -86,20 +89,31 @@ def parseXmlToJson(case):
     #授权文件路径，再次插入时进行删除使用
     authJson['path'] = path
     data = []
-    authJson['noticePath'] = ''
+    authJson['notice'] = ''
+    #获取申请号日期
     for xmlData in xmlDataList:
         child = {}
-        child['ori_name'] = xmlData['logicalName'].encode('utf-8')
-        child['path'] = ipPort + path + '/' + xmlData['physicalName']
+        logicName = xmlData['logicalName'].encode('utf-8')
+        child['ori_name'] = logicName
+        child['path'] = path + '/' + xmlData['physicalName']
         child['version'] = 0
-        child['date'] = submitDate
+        child['rotateDesc'] = {}
+        #日期从表中查询得到
+        if picnameDict.has_key(logicName):
+            date = picnameDict[logicName]
+        else:
+            date = ''
+        child['date'] = date
         keys = extractWord(xmlData['logicalName'])
         child['name'] = keys[-1]
         #2.解析xml to json
         toOriginJson(data,keys,child)
         #3.处理公示图
+        noticePath = child['path']
         if xmlData['fengpiFlag'] == '1':
-            authJson['noticePath'] = child['path']
+            authJson['notice'] = child['path']
+    if not authJson.has_key('notice'):
+        authJson['notice'] = noticePath
     authJson['data'] = data
     return authJson
 
@@ -130,14 +144,16 @@ def thrumbImgs(srcImgPath,desImgPath,weight,height):
     files = os.listdir(srcImgPath)
     for file in files:
         try:
-            if not os.path.isdir(srcImgPath + '/' + file) and not '_' in file and not 'xml' in file and 'zip' not in file :
+            filepath = srcImgPath + '/' + file
+            if not os.path.isdir(filepath) and not '_' in file and not 'xml' in file and 'zip' not in file :
                 fileId, ext = os.path.splitext(file)
                 saveImgPath = desImgPath + '/' + fileId + '_' + str(weight) + '_' + str(height) + ext
                 im = Image.open(srcImgPath + '/' + file)
-                im.thumbnail(size)
-                im.save(saveImgPath)
+                # originMode = im.mode
+                im.thumbnail(size,Image.ANTIALIAS)
+                im.save(saveImgPath,'JPEG')
         except Exception as e:
-            logger.info(traceback.format_exc())
+            logger.info("filepath: " + str(filepath) + traceback.format_exc())
 
 
 def copyDir(srcPath,desPath):
@@ -235,7 +251,7 @@ def isEqual(data,elementJson):
             children = isEqual(data[i]['children'],elementJson['children'][0])
             data[i]['children'] = children
             break
-        else:
+        elif i == len(data) - 1:
             data.append(elementJson)
             break
     return data
@@ -262,8 +278,11 @@ def getNoticePath(name):
     return True, False
 
 
+#根据redis中信息删除文件
 def deleteAuthDir(client,authKey):
     authJson = redisUtils.getStrValue(client,authKey)
+    if authJson == 0:
+        return False
     if authJson is not None:
         authDic = json.loads(authJson)
         oldPath = authDic["path"]
@@ -273,6 +292,7 @@ def deleteAuthDir(client,authKey):
             shutil.rmtree(oldPath)
         #删除redis中数据
         redisUtils.deleteKey(client,authKey)
+    return True
 
 
 
@@ -282,7 +302,10 @@ def getAuthDir(shenqingh,documentType,submitDate,fid):
     month = submitDate[5:7]
     day = submitDate[8:10]
     hour = submitDate[11:13]
-    return authPath + year + '/' + month + '/' + day + '/' + hour + '/' + shenqingh + '/' + documentType + '/' + fid
+    path = authPath + year + '/' + month + '/' + day + '/' + hour + '/' + shenqingh + '/' + documentType + '/' + fid
+    if not os.path.exists(path):
+        os.makedirs(path)
+    return path
 
 
 def parsexml(path):
@@ -308,4 +331,5 @@ def parsexml(path):
 
 if __name__=="__main__":
     # print getFtpInfo("ftp://efsftp_w:123456@10.1.10.229:21/20180719/13/494306658.zip")
-    print extractWord('主视图'.encode('utf-8'))
+    # print extractWord('主视图'.encode('utf-8'))
+    thrumbImgs('appTest/srcImg','appTest/desImg',90,90)

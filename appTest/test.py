@@ -78,9 +78,23 @@ def thrumbTest():
     im.thumbnail(size)
     im.save(saveImgPath)
 
+import os
+def new():
+    filepath = '000001.jpg'
+    try:
+        if not os.path.isdir(filepath):
+            fileId, ext = os.path.splitext(filepath)
+            im = Image.open(filepath)
+            originMode = im.mode
+            im.thumbnail((30,30))
+            im.save(saveImgPath, originMode, optimize=True)
+    except Exception as e:
+        logger.info("filepath: " + str(filepath) + traceback.format_exc())
+
 
 if __name__=="__main__":
     # getValues()
     # get()
     # ftpTest()
-    thrumbTest()
+    # thrumbmbTest()
+    new()

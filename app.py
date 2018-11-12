@@ -5,25 +5,24 @@ import os
 import redis,shutil
 import sys
 import traceback
-
 from flask import Flask, request, jsonify, make_response
-
 import appLogic
 from config import logger, thumbSizeList
 from utils import redisUtils, utils
 from utils.parseUtils import getVersionPath
 import migrateLogic
-
-# from iptcinfo import IPTCInfo
-
+from utils import ImagePathUtils
+import time
+from utils import oracleUtils
 reload(sys)
 sys.setdefaultencoding('utf8')
 
 app = Flask(__name__)
 
 #redis
-pool = redis.ConnectionPool(host='127.0.0.1', port=6379, decode_responses=True)
-client = redis.Redis(connection_pool=pool)
+redisPool = redis.ConnectionPool(host='127.0.0.1', port=6379, decode_responses=True)
+client = redis.Redis(connection_pool=redisPool)
+
 
 class InvalidUsage(Exception):
     status_code = 400
@@ -49,9 +48,11 @@ def handle_invalid_usage(error):
     return response
 
 
-@app.route("/")
+@app.route("/hello")
 def hello():
-    return "success"
+    time.sleep(10)
+    return "hello!"
+
 
 @app.route('/upload',methods=['POST'])
 def uploadXMLCase():
@@ -72,6 +73,8 @@ def uploadXMLCase():
     if 'cases' in jsonData.keys():
         cases = jsonData['cases']
     for case in cases:
+        if appLogic.validCase(case) == 0:
+            return jsonify({'status': 0})
         currentDir,zipDir,zipFile = appLogic.getZipFilePath(case)
         if os.path.isfile(zipFile):
             logger.info("文件已经存在，跳过")
@@ -83,27 +86,37 @@ def uploadXMLCase():
             #2.从ftp服务器下载zip到origin,并解压到origin文件夹下 #下载、解压、缩略图、复制
             flag = appLogic.ftpDownload(case)
             if flag == 0:
+                appLogic.deleteAll(case)
                 logger.info('申请号：' +shenqingh + ' ,文件类型： ' + documentType + ' ,fid: ' + fid + ' : download Failed!')
                 return jsonify({'status': 0})
             #4.解析xml文件为json结构
-            originJson,noticePath = appLogic.parseXmlToJson(case)
-            if len(originJson) == 0:
+            originJson,currentJson,noticePath = appLogic.parseXmlToJson(case)
+            if len(originJson) == 0 or len(currentJson) == 0:
+                appLogic.deleteAll(case)
                 logger.info('申请号：' + shenqingh + ' ,文件类型： ' + documentType + ' ,fid: ' + fid + ' : xml parse exception!')
                 return jsonify({'status': 0})
+            # 原始结构添加公告图
+            originJson['notice'] = noticePath
             # 将原始数据保存到redis
             originKey = utils.getKey(shenqingh, documentType, 'origin')
             originValueStr = json.dumps(originJson, ensure_ascii=False, encoding='utf-8')
-            redisUtils.setHashField(client,originKey,fid,originValueStr)
-            #组合当前版json
+            success = redisUtils.setHashField(client,originKey,fid,originValueStr)
+            if success == 0:
+                appLogic.deleteAll(case)
+                return jsonify({'status': 0})
+            #组合当前版json =>生成原始时同时生成当前版
             #获取以前的当前版json
             currentKey = utils.getKey(shenqingh,documentType,'')
             oldCurrent = redisUtils.getStrValue(client,currentKey)
+            if oldCurrent == 0:
+                appLogic.deleteAll(case)
+                return jsonify({'status': 0})
             if oldCurrent is None:
                 context = {}
                 context['pid'] = shenqingh + '_' + documentType
                 context['notice'] = noticePath
                 lastVersion = []
-                lastVersion.append(originJson)
+                lastVersion.append(currentJson)
                 context['lastVersion'] = lastVersion
                 contextStr = json.dumps(context, ensure_ascii=False, encoding='utf-8')
             else:
@@ -111,14 +124,14 @@ def uploadXMLCase():
                 if noticePath != '':
                     oldCurrentDict['notice'] = noticePath
                 oldCurrentData = oldCurrentDict['lastVersion']
-                oldCurrentData.append(originJson)
+                oldCurrentData.append(currentJson)
                 contextStr = json.dumps(oldCurrentDict, ensure_ascii=False, encoding='utf-8')
-            redisUtils.setStrValue(client,currentKey,contextStr)
+            success = redisUtils.setStrValue(client,currentKey,contextStr)
+            if success == 0:
+                appLogic.deleteAll(case)
+                return jsonify({'status': 0})
         except Exception as e:
-            if os.path.exists(currentDir):
-                shutil.rmtree(currentDir)
-            if os.path.exists(zipDir):
-                shutil.rmtree(zipDir)
+            appLogic.deleteAll(case)
             logger.info('申请号：' + shenqingh + ' ,文件类型： ' + documentType + ' ,fid: ' + fid + ' : exception!')
             logger.info(traceback.format_exc())
             return jsonify({'status': 0})
@@ -145,9 +158,11 @@ def getCurrentData():
     value = redisUtils.getStrValue(client,key)
     context = {}
     context['lastVersion'] = []
-    if value is not None:
+    if value is not None and value != 0:
         valueDict = json.loads(value)
+        #路径添加前缀
         context['lastVersion'] = valueDict['lastVersion']
+        ImagePathUtils.currentPreffixHandle(context,'addPrefix')
     result = json.dumps(context, ensure_ascii=False, encoding='utf-8')
     return result,{'Content-Type': 'application/json'}
 
@@ -172,13 +187,15 @@ def loadData():
     key = utils.getKey(shenqingh,documentType)
     value = redisUtils.getStrValue(client,key)
     resultJson = {}
-    if value is not None:
+    if value is not None and value != 0:
         resultJson = json.loads(value)
+        ImagePathUtils.currentPreffixHandle(resultJson,'addPrefix')
     authKey = utils.getKey(shenqingh,documentType,'auth')
     #2.获取授权版
     authValue = redisUtils.getStrValue(client,authKey)
-    if authValue is not None:
+    if authValue is not None and authValue != 0:
         authJson = json.loads(authValue)
+        ImagePathUtils.authPreffixHandle(authJson,'addPrefix')
         resultJson['authVersion'] = authJson
     result = json.dumps(resultJson, ensure_ascii=False, encoding='utf-8')
     response = make_response(result)
@@ -214,7 +231,7 @@ def modifyImg():
         # 从json获取图片版本号并加一
         key = utils.getKey(shenqingh, documentType)
         value = redisUtils.getStrValue(client,key)
-        if value is not None:
+        if value is not None and value != 0:
             value = json.loads(value)
             lastVersionData = value['lastVersion']
             for context in lastVersionData:
@@ -253,6 +270,7 @@ def modifyTree():
         out['message'] = 'params is None'
         raise InvalidUsage('params is None',status_code=401)
     jsonData = json.loads(jsonData)
+    ImagePathUtils.currentPreffixHandle(jsonData,'clearPrefix')
     json_str = json.dumps(jsonData,ensure_ascii=False,encoding='utf-8')
     key = utils.getKey(shenqingh,documentType)
     try:
@@ -287,6 +305,7 @@ def saveAuthImgs():
         out['message'] = 'get params exception'
         raise InvalidUsage("get params exception",status_code=401)
     jsonValue = json.loads(jsonValue)
+    ImagePathUtils.authPreffixHandle(jsonValue,'clearPrefix')
     authKey = utils.getKey(shenqingh,documentType,'auth')
     authStr = json.dumps(jsonValue, ensure_ascii=False, encoding='utf-8')
     try:
@@ -326,6 +345,7 @@ def getOriginImgs():
         if value is None:
             return resultFailed, {'Content-Type': 'application/json'}
         valueDic = json.loads(value)
+        ImagePathUtils.originPreffixHandle(valueDic,'addPrefix')
         res['origin'] = valueDic
         result = json.dumps(res,ensure_ascii=False, encoding='utf-8')
         return result,{'Content-Type': 'application/json'}
@@ -338,8 +358,10 @@ def getOriginImgs():
             content = {}
             content['fid'] = key
             v = json.loads(valueDict[key])
+            ImagePathUtils.originPreffixHandle(v,'addPrefix')
             content['data'] = v['data']
             content['date'] = v['date']
+            content['notice'] = v['notice']
             contentList.append(content)
         res['origin'] = contentList
         result = json.dumps(res,ensure_ascii=False, encoding='utf-8')
@@ -354,14 +376,12 @@ def getAuthImgs():
     if shenqingh is None or documentType is None:
         raise InvalidUsage('get params exception', status_code=401)
     authKey = utils.getKey(shenqingh,documentType,'auth')
-    try:
-        value = redisUtils.getStrValue(client,authKey)
-    except Exception as e:
-        raise InvalidUsage('redis operate exception', status_code=405)
+    value = redisUtils.getStrValue(client,authKey)
     res = {}
     res['authVersion'] = ''
-    if value is not None:
+    if value is not None and value != 0:
         valueLoad = json.loads(value)
+        ImagePathUtils.authPreffixHandle(valueLoad,'addPrefix')
         res['authVersion'] = valueLoad
     result = json.dumps(res,ensure_ascii=False,encoding='utf-8')
     return result, {'Content-Type': 'application/json'}
@@ -389,19 +409,21 @@ def getThrumbImgs():
             fidContext = {}
             fidContext['fid'] = key
             fidData = json.loads(originDict[key])
+            ImagePathUtils.originPreffixHandle(fidData,'addPrefix')
             fidContext['data'] = fidData['data']
             # fidContext['date'] = fidData['date']
             context['origin'].append(fidContext)
         authKey = utils.getKey(arr[0],arr[1],'auth')
         authStr = redisUtils.getStrValue(client,authKey)
-        if authStr is not None:
+        if authStr is not None and authStr != 0:
             authJson = json.loads(authStr)
+            ImagePathUtils.authPreffixHandle(authJson,'addPrefix')
             context['authVersion'] = authJson
         result[shenqinghKey] = context
     return json.dumps(result, ensure_ascii=False, encoding='utf-8'),{'Content-Type': 'application/json'}
 
 
-@app.route('/uploadAuthImgs', methods=['POST'])
+@app.route('/uploadAuthImgs', methods=['POST','GET'])
 def uploadAuthImgs():
     '''入库接口{
     "shenqingh":"201830064781X",//申请号
@@ -412,41 +434,48 @@ def uploadAuthImgs():
     "submitDate":"TIJIAORQ"
     }
     '''
-    status = 1
     case = request.get_json()
-    logger.info("case: " + str(case))
-    if case is None:
-        status = 0
-        logger.info(str(case) + ": get params exception: ")
-        return jsonify({'status':status})
+    if appLogic.validCase(case) == 0:
+        return jsonify({'status': 0})
     shenqingh = case['shenqingh']
     documentType = case['wenjianlx']
-    #下载文件
-    flag = migrateLogic.ftpDownload(client,case)
+    # 下载文件
+    flag = migrateLogic.ftpDownload(case)
+    logger.info('shenqingh: ' + str(shenqingh) + 'download end!')
     if flag == 0:
-        status = 0
-        logger.info(shenqingh + '_' + documentType + " : get download exception: ")
-        return jsonify({'status': status})
-    logger.info("下载结束！")
+        migrateLogic.deleteAuthAll(case)
+        logger.info("shenqingh download exception: " + str(case))
+        return jsonify({'status': 0})
     try:
-        #删除旧文件
         authKey = shenqingh + '_' + documentType + '_a'
-        migrateLogic.deleteAuthDir(client,authKey)
-        #解析文件
-        authJson = migrateLogic.parseXmlToJson(case)
+        # 解析文件
+        dateDict = oracleUtils.getAuthDate(shenqingh)
+        authJson = migrateLogic.parseXmlToJson(case, dateDict)
         if len(authJson) == 0:
-            logger.info(shenqingh + "_" + documentType + ',xml parse exception')
+            migrateLogic.deleteAuthAll(case)
+            logger.info('xml parse exception: ' + str(case))
             return jsonify({'status': 0})
-        logger.info("解析结束")
-        #添加redis
-        redisUtils.setStrValue(client,authKey,json.dumps(authJson,ensure_ascii=False,encoding='utf-8'))
-        logger.info("redis设置结束")
-        return jsonify({"status":status})
+        # 删除旧文件
+        delSuccess = migrateLogic.deleteAuthDir(client, authKey)
+        if delSuccess == 0:
+            migrateLogic.deleteAuthAll(case)
+            logger.info("delete old auth dir: " + str(case))
+            return jsonify({'status': 0})
+        # 添加redis
+        addRedis = redisUtils.setStrValue(client, authKey, json.dumps(authJson, ensure_ascii=False, encoding='utf-8'))
+        if addRedis == 0:
+            migrateLogic.deleteAuthAll(case)
+            logger.info("set redis exception: " + str(case))
+            return jsonify({'status': 0})
     except Exception as e:
-        status = 0
-        logger.info(shenqingh + '_' + documentType + traceback.format_exc())
-        return jsonify({"status":status})
+        migrateLogic.deleteAuthAll(case)
+        logger.info(str(case) + traceback.format_exc())
+        return jsonify({"status": 0})
+    return jsonify({"status": 1})
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000,debug=True,use_reloader=True)
+    # from werkzeug.contrib.fixers import ProxyFix
+    # app.wsgi_app = ProxyFix(app.wsgi_app)
+    # app.run()
+    app.run(host='0.0.0.0',port=5000,debug=True,use_reloader=True,threaded=True)

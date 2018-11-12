@@ -15,13 +15,14 @@ ALLOWED_EXTENSIONS=set(["zip","jpg","jpeg","png","gif"])
 thumbSize1=(210,210)
 thumbSize2=(20,20)
 #数组0号为宽，1号为高
-thumbSizeList=[[90,90],[140,140],[210,210]]
+thumbSizeList=[[60,60],[140,140],[210,210],[450,450],[600,600]]
 #图片初始版本号
 imgInitialVersion = 0
 # 存储路径 .../data/imgs/storage/
-basePath = '/data/storage/'
-# basePath = 'static/image/'
-ipPort = 'http://10.75.13.114:50003'
+basePath = '/wgzstxqy/data/'
+# basePath = '/data/imgs/storage/'
+ipPort = 'http://10.50.167.111:80'
+
 
 #当前文件夹名称
 modifyDirName = 'a'
@@ -29,4 +30,4 @@ originDirName = 'o'
 authDirName = 'c'
 
 #入库使用
-authPath = '/data/storage/auth/'
+authPath = '/wgzstxqy/data/auth/'
