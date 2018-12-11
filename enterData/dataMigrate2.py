@@ -25,6 +25,7 @@ def getFTP(fid,version=1):
 
 def fileToList():
     reqs = []
+    #shenqingh fid originfid  submitdate
     with open('data2.txt','r') as f:
         lines = f.readlines()
         for line in lines:
@@ -40,8 +41,8 @@ def fileToList():
             logger.info("fid: " + lineList[1] + 'ftp: ' + ftp)
             case['shenqingh'] = lineList[0]
             case['wenjianlx'] = '130001'
-            case['fid'] = lineList[1]
-            case['submitDate'] = lineList[2]
+            case['fid'] = lineList[2]
+            case['submitDate'] = lineList[3]
             case['url'] = ftp
             cases.append(case)
             req['cases'] = cases

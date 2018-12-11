@@ -10,7 +10,8 @@ from PIL import Image, ImageFile
 
 from config import ipPort, authPath
 from config import logger, thumbSizeList
-from utils import utils,oracleUtils
+from utils import utils
+import cv2
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
@@ -148,12 +149,43 @@ def thrumbImgs(srcImgPath,desImgPath,weight,height):
             if not os.path.isdir(filepath) and not '_' in file and not 'xml' in file and 'zip' not in file :
                 fileId, ext = os.path.splitext(file)
                 saveImgPath = desImgPath + '/' + fileId + '_' + str(weight) + '_' + str(height) + ext
-                im = Image.open(srcImgPath + '/' + file)
-                # originMode = im.mode
-                im.thumbnail(size,Image.ANTIALIAS)
-                im.save(saveImgPath,'JPEG')
+                im = cv2.imread(filepath)
+                channels = cv2.split(im)
+                if channels != 3:
+                    pilHandler(im, saveImgPath, size)
+                else:
+                    cvHandler(im, saveImgPath, size)
         except Exception as e:
             logger.info("filepath: " + str(filepath) + traceback.format_exc())
+
+
+def pilHandler(im,saveImgPath,format):
+    mode = im.mode
+    if mode not in ('L', 'RGB'):
+        if mode == 'RGBA':
+            # 透明图片需要加白色底
+            alpha = im.split()[3]
+            bgmask = alpha.point(lambda x: 255 - x)
+            im = im.convert('RGB')
+            im.paste((255, 255, 255), None, bgmask)
+        else:
+            im = im.convert('RGB')
+    im.thumbnail(format, Image.ANTIALIAS)
+    im.save(saveImgPath, quality=100)
+
+
+def cvHandler(im,saveImgPath,size):
+    h, w = im.shape[0],im.shape[1]
+    if h > size[0]:
+        w = int(max(w * size[0] / h, 1))
+        h = int(size[0])
+    if w > size[1]:
+        h = int(max(h * size[1] / w, 1))
+        w = int(size[1])
+    size = (w,h)
+    im = cv2.resize(im,size)
+    cv2.imwrite(saveImgPath,im)
+
 
 
 def copyDir(srcPath,desPath):

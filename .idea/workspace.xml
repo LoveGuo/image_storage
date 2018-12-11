@@ -2,38 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418666da-b682-4cf8-8c85-cf2fb3b2c031" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ConnectionPool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/130001.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/jsonstruct.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/srcImg/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/srcImg/L.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/srcImg/RGBA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/srcImg/cmyk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/testJsonStruct.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appTest/testOracleData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enterData/createTable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/errorDataHandleMethod.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gun.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/ImagePathUtils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/oracleUtils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appTest/testMigrate/migrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appTest/testMigrate/migrate0_1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appTest/testWSDL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appTest/thumbImg/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appendOperate/appendThumb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appendOperate/del.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appendOperate/delCase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appendOperate/test/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appendOperate/test/2.TIF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appendOperate/test/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appendOperate/test/appendThumbTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/appLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_bat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appTest/testOracleData.py" beforeDir="false" afterPath="$PROJECT_DIR$/appTest/testOracleData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterData/dataMigrate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterData/migrate.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enterData/test/webServiceTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterData/data2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/enterData/data2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterData/dataMigrate2.py" beforeDir="false" afterPath="$PROJECT_DIR$/enterData/dataMigrate2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enterData/test/testOracle.py" beforeDir="false" afterPath="$PROJECT_DIR$/enterData/test/testOracle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gun.py" beforeDir="false" afterPath="$PROJECT_DIR$/gun.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrateLogic.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrateLogic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moveImage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/appTest/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/appTest/test2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testXMLParse.py" beforeDir="false" afterPath="$PROJECT_DIR$/appTest/testXMLParse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/parseUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/parseUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/redisUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/redisUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,25 +37,28 @@
     <SUITE FILE_PATH="coverage/image_storage$testOracleData.coverage" NAME="testOracleData Coverage Results" MODIFIED="1540542897237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/appTest" />
     <SUITE FILE_PATH="coverage/image_storage$copyImgs.coverage" NAME="copyImgs Coverage Results" MODIFIED="1532061606177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$testJsonStruct.coverage" NAME="testJsonStruct Coverage Results" MODIFIED="1539933150234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/appTest" />
+    <SUITE FILE_PATH="coverage/image_storage$appendThumbTest.coverage" NAME="appendThumbTest Coverage Results" MODIFIED="1543992586209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/appendOperate/test" />
     <SUITE FILE_PATH="coverage/image_storage$moveImage.coverage" NAME="moveImage Coverage Results" MODIFIED="1534239009170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$test.coverage" NAME="test Coverage Results" MODIFIED="1541763450115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/appTest" />
     <SUITE FILE_PATH="coverage/image_storage$webServiceTest.coverage" NAME="webServiceTest Coverage Results" MODIFIED="1534749594641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData/test" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_in_ImagePathUtils_py.coverage" NAME="Twisted Trial in ImagePathUtils.py Coverage Results" MODIFIED="1539669637132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/image_storage$errorDataHandleMethod.coverage" NAME="errorDataHandleMethod Coverage Results" MODIFIED="1540201236912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_storage$dataMigrate2.coverage" NAME="dataMigrate2 Coverage Results" MODIFIED="1540516990884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData" />
+    <SUITE FILE_PATH="coverage/image_storage$dataMigrate2.coverage" NAME="dataMigrate2 Coverage Results" MODIFIED="1543490739895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData" />
     <SUITE FILE_PATH="coverage/image_storage$imgUtils.coverage" NAME="imgUtils Coverage Results" MODIFIED="1531451465019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/image_storage$testXMLParse.coverage" NAME="testXMLParse Coverage Results" MODIFIED="1533718896306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$config.coverage" NAME="config Coverage Results" MODIFIED="1531454267908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_storage$appLogic.coverage" NAME="appLogic Coverage Results" MODIFIED="1533704475873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_storage$appLogic.coverage" NAME="appLogic Coverage Results" MODIFIED="1542940692343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1541997207253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_storage$client.coverage" NAME="client Coverage Results" MODIFIED="1541997624088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_storage$client.coverage" NAME="client Coverage Results" MODIFIED="1542072510522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$image_storage.coverage" NAME="image_storage Coverage Results" MODIFIED="1529571206250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_in_test.coverage" NAME="Twisted Trial in test Coverage Results" MODIFIED="1537854025675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/image_storage$utils.coverage" NAME="utils Coverage Results" MODIFIED="1532593068510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/image_storage$parseUtils.coverage" NAME="parseUtils Coverage Results" MODIFIED="1532926857477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/image_storage$migrate.coverage" NAME="migrate Coverage Results" MODIFIED="1542072433752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/appTest/testMigrate" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_for_ImagePathUtils_testAdd.coverage" NAME="Twisted Trial for ImagePathUtils.testAdd Coverage Results" MODIFIED="1539669710445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/image_storage$dataMigrate3.coverage" NAME="dataMigrate3 Coverage Results" MODIFIED="1536147134312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData" />
     <SUITE FILE_PATH="coverage/image_storage$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1534816494427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_storage$delCase.coverage" NAME="delCase Coverage Results" MODIFIED="1543489643294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/appendOperate" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_for_appClient_testThumbImgs.coverage" NAME="Twisted Trial for appClient.testThumbImgs Coverage Results" MODIFIED="1532311849182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$appClient.coverage" NAME="appClient Coverage Results" MODIFIED="1532334596822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$dataMigrate.coverage" NAME="dataMigrate Coverage Results" MODIFIED="1534739594673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/enterData" />
@@ -75,50 +68,79 @@
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_for_client_testThumbImgs.coverage" NAME="Twisted Trial for client.testThumbImgs Coverage Results" MODIFIED="1532311976865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_storage$testOracle.coverage" NAME="testOracle Coverage Results" MODIFIED="1539654632277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/image_storage$ImagePathUtils.coverage" NAME="ImagePathUtils Coverage Results" MODIFIED="1539752496963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/image_storage$testWSDL.coverage" NAME="testWSDL Coverage Results" MODIFIED="1544064700751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/appTest" />
     <SUITE FILE_PATH="coverage/image_storage$Twisted_Trial_in_copyImgs_py.coverage" NAME="Twisted Trial in copyImgs.py Coverage Results" MODIFIED="1534238550072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="appendThumb.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appendOperate/appendThumb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="45" column="48" selection-start-line="40" selection-start-column="12" selection-end-line="45" selection-end-column="48" />
+              <folding>
+                <element signature="e#22#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appLogic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appLogic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5947">
+              <caret line="321" column="31" selection-start-line="296" selection-end-line="321" selection-end-column="31" />
+              <folding>
+                <element signature="e#22#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="migrateLogic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migrateLogic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="e#22#35#0" expanded="true" />
+                <element signature="e#639#1067#0" />
+                <element signature="e#1139#1239#0" />
+                <element signature="e#1306#4921#0" />
+                <element signature="e#4998#5883#0" />
+                <element signature="e#5950#7274#0" />
+                <element signature="e#7343#9750#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dataMigrate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/enterData/dataMigrate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3572">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="140" column="27" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="27" />
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="10" />
               <folding>
-                <element signature="e#22#35#0" expanded="true" />
+                <element signature="e#22#52#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImagePathUtils.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils/ImagePathUtils.py">
+      <file leaf-file-name="testWSDL.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appTest/testWSDL.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="e#1811#6523#0" />
-                <element signature="e#4022#6455#0" />
-                <element signature="e#6547#8998#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -135,20 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>copy</find>
-      <find>num</find>
-      <find>cursor2</find>
-      <find>10.50.160.2</find>
-      <find>pool</find>
-      <find>SessionPool</find>
-      <find>from</find>
-      <find>txsb_user</find>
-      <find>save</find>
-      <find>ipPort</find>
-      <find>cx_Oracle</find>
-      <find>datetime</find>
-      <find>conn</find>
-      <find>select</find>
       <find>wg_qtxxb</find>
       <find>end</find>
       <find>sql</find>
@@ -165,6 +173,20 @@
       <find>oraclePool</find>
       <find>pool1521</find>
       <find>get</find>
+      <find>UPLOAD_FOLDER</find>
+      <find>ALLOWED_EXTENSIONS</find>
+      <find>thumbSize1</find>
+      <find>saveAndCopyImg</find>
+      <find>167.111</find>
+      <find>redis</find>
+      <find>ftpDownload</find>
+      <find>Image.ANTIALIAS</find>
+      <find>logg</find>
+      <find>os.</find>
+      <find>set</find>
+      <find>thrumbImg</find>
+      <find>thrumbImgs</find>
+      <find>thumb</find>
     </findStrings>
     <replaceStrings>
       <replace>statuscode</replace>
@@ -176,14 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils/__init__.py" />
-        <option value="$PROJECT_DIR$/app描述" />
-        <option value="$PROJECT_DIR$/Entity/ImgInfo.py" />
-        <option value="$PROJECT_DIR$/utils/dataStruct.py" />
-        <option value="$PROJECT_DIR$/utils/timeUtils.py" />
-        <option value="$PROJECT_DIR$/utils/appLogic.py" />
-        <option value="$USER_HOME$/Desktop/外观存储/EA/js/app.js" />
-        <option value="$PROJECT_DIR$/utils/imgUtils.py" />
         <option value="$PROJECT_DIR$/utils/pidUtils.py" />
         <option value="$PROJECT_DIR$/appClient.py" />
         <option value="$PROJECT_DIR$/app_bat.py" />
@@ -195,11 +209,9 @@
         <option value="$PROJECT_DIR$/test2.py" />
         <option value="$PROJECT_DIR$/enterData/dataMigrate3.py" />
         <option value="$PROJECT_DIR$/enterData/migrate2.log" />
-        <option value="$PROJECT_DIR$/enterData/dataMigrate2.py" />
         <option value="$PROJECT_DIR$/enterData/test/redisTest.py" />
         <option value="$PROJECT_DIR$/test/main2.py" />
         <option value="$PROJECT_DIR$/utils/redisUtils.py" />
-        <option value="$PROJECT_DIR$/utils/utils.py" />
         <option value="$PROJECT_DIR$/test/testOracle.py" />
         <option value="$PROJECT_DIR$/utils/parseUtils.py" />
         <option value="$PROJECT_DIR$/utils/ImagePathUtils.py" />
@@ -211,22 +223,32 @@
         <option value="$PROJECT_DIR$/enterData/dataMigrate3_4.py" />
         <option value="$PROJECT_DIR$/enterData/dataMigrate4_5.py" />
         <option value="$PROJECT_DIR$/errorDataHandleMethod.py" />
-        <option value="$PROJECT_DIR$/enterData/data2.txt" />
         <option value="$PROJECT_DIR$/enterData/oracleOperate.py" />
         <option value="$PROJECT_DIR$/gun.conf" />
         <option value="$PROJECT_DIR$/enterData/createTable.py" />
         <option value="$PROJECT_DIR$/app.log" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/gun.py" />
-        <option value="$PROJECT_DIR$/appTest/testOracleData.py" />
         <option value="$PROJECT_DIR$/appTest/test.py" />
-        <option value="$PROJECT_DIR$/migrateLogic.py" />
-        <option value="$PROJECT_DIR$/appLogic.py" />
         <option value="$PROJECT_DIR$/enterData/dataMigrate.py" />
         <option value="$PROJECT_DIR$/utils/oracleUtils.py" />
         <option value="$PROJECT_DIR$/ConnectionPool.py" />
-        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/gun.py" />
+        <option value="$PROJECT_DIR$/appTest/testOracleData.py" />
+        <option value="$PROJECT_DIR$/appTest/testMigrate/migrate.py" />
         <option value="$PROJECT_DIR$/client.py" />
+        <option value="$PROJECT_DIR$/enterData/test/testOracle.py" />
+        <option value="$PROJECT_DIR$/appTest/thrumbnailTest.py" />
+        <option value="$PROJECT_DIR$/utils/utils.py" />
+        <option value="$PROJECT_DIR$/enterData/dataMigrate2.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/appendOperate/del.txt" />
+        <option value="$PROJECT_DIR$/appendOperate/delCase.py" />
+        <option value="$PROJECT_DIR$/enterData/data2.txt" />
+        <option value="$PROJECT_DIR$/appendOperate/test/appendThumbTest.py" />
+        <option value="$PROJECT_DIR$/appendOperate/appendThumb.py" />
+        <option value="$PROJECT_DIR$/appLogic.py" />
+        <option value="$PROJECT_DIR$/migrateLogic.py" />
+        <option value="$PROJECT_DIR$/appTest/testWSDL.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -239,51 +261,18 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="324" />
-    <option name="y" value="324" />
-    <option name="width" value="1338" />
-    <option name="height" value="594" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="54" />
+    <option name="y" value="87" />
+    <option name="width" value="1890" />
+    <option name="height" value="930" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="image_storage" type="cbb8eebc:String" user="image_storage" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="image_storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="image_storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="image_storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="image_storage" type="462c0819:PsiDirectoryNode" />
-              <item name="appTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="image_storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="image_storage" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="保存到&#9;null&#9;null" />
@@ -292,17 +281,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\python\image_storage\appTest" />
-      <recent name="E:\python\image_storage\appTest\srcImg" />
-      <recent name="E:\python\image_storage\static" />
-      <recent name="E:\python\image_storage\enterData\test" />
-      <recent name="E:\python\image_storage\test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\python\image_storage\utils" />
       <recent name="E:\python\image_storage\appTest" />
       <recent name="E:\python\image_storage" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\python\image_storage\appendOperate\test" />
+      <recent name="E:\python\image_storage\appTest\thumbImg" />
+      <recent name="E:\python\image_storage\appTest" />
+      <recent name="E:\python\image_storage\appTest\testMigrate" />
+      <recent name="E:\python\image_storage\appTest\srcImg" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -317,8 +306,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.client">
-    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.testWSDL">
+    <configuration name="appLogic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="image_storage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -331,13 +320,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/appLogic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="migrateLogic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="appendThumbTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="image_storage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -345,18 +334,56 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/appendOperate/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/migrateLogic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/appendOperate/test/appendThumbTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dataMigrate2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="image_storage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/enterData" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enterData/dataMigrate2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="delCase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="image_storage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/appendOperate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/appendOperate/delCase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="testWSDL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="image_storage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,44 +396,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/appTest/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/appTest/testWSDL.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="testOracleData" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="image_storage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/appTest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/appTest/testOracleData.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Flask (app.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
-      <module name="image_storage" />
-      <option name="target" value="$PROJECT_DIR$/app.py" />
-      <option name="targetType" value="PATH" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
     </configuration>
     <configuration name="image_storage" type="Python.FlaskServer" factoryName="Flask server">
       <module name="image_storage" />
@@ -424,19 +418,19 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.image_storage" />
-      <item itemvalue="Python.client" />
-      <item itemvalue="Python.testOracleData" />
-      <item itemvalue="Flask server.Flask (app.py)" />
-      <item itemvalue="Python.migrateLogic" />
-      <item itemvalue="Python.test" />
+      <item itemvalue="Python.appLogic" />
+      <item itemvalue="Python.delCase" />
+      <item itemvalue="Python.dataMigrate2" />
+      <item itemvalue="Python.appendThumbTest" />
+      <item itemvalue="Python.testWSDL" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.client" />
-        <item itemvalue="Flask server.Flask (app.py)" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.migrateLogic" />
-        <item itemvalue="Python.testOracleData" />
+        <item itemvalue="Python.testWSDL" />
+        <item itemvalue="Python.appendThumbTest" />
+        <item itemvalue="Python.dataMigrate2" />
+        <item itemvalue="Python.delCase" />
+        <item itemvalue="Python.appLogic" />
       </list>
     </recent_temporary>
   </component>
@@ -486,7 +480,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -494,22 +488,22 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15185185" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36666667" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.46296296" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19159256" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.30540037" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32037038" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42777777" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3888889" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32037038" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -549,12 +543,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/appLogic.py</url>
-          <line>177</line>
+          <line>178</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils/utils.py</url>
-          <line>121</line>
+          <line>122</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -569,12 +563,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>164</line>
+          <line>159</line>
           <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/appLogic.py</url>
-          <line>139</line>
+          <line>140</line>
           <option name="timeStamp" value="170" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -584,8 +578,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/client.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="198" />
+          <line>78</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/appLogic.py</url>
+          <line>286</line>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/appendOperate/delCase.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/appendOperate/test/appendThumbTest.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/appendOperate/test/appendThumbTest.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://E:/tool/python/install27_32/Lib/site-packages/PIL/Image.py</url>
+          <line>2051</line>
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/appendOperate/test/appendThumbTest.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/appTest/testWSDL.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="217" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -595,126 +624,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="199" />
+      <option name="time" value="218" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/enterData/dataMigrate3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/tool/python/install27_32/Lib/site-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/test/webServiceTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/test/redisTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/tool/python/install27_32/Lib/zipfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="1015" column="8" selection-start-line="1015" selection-start-column="8" selection-end-line="1015" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/main2.py" />
-    <entry file="file://$PROJECT_DIR$/moveImage.py" />
-    <entry file="file://$PROJECT_DIR$/utils/imgUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-494">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/testOracle.py" />
-    <entry file="file://E:/tool/python/install27_32/Lib/site-packages/twisted/trial/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="569" selection-start-line="569" selection-end-line="569" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/test/testOracle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/parseUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="129" column="20" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app描述">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2339" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appTest/testXMLParse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <folding>
-            <element signature="e#22#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appTest/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/jsonstruct.xml" />
-    <entry file="file://$PROJECT_DIR$/appTest/jsonstruct.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appTest/130001.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appTest/testJsonStruct.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="78" column="31" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="31" />
-          <folding>
-            <element signature="e#23#50#0" expanded="true" />
-            <element signature="e#135#2131#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/dataMigrate0_1.py" />
     <entry file="file://$PROJECT_DIR$/enterData/dataMigrate1_2.py" />
     <entry file="file://$PROJECT_DIR$/enterData/dataMigrate4_5.py" />
     <entry file="file://$PROJECT_DIR$/enterData/dataMigrate3_4.py" />
@@ -723,30 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="145" column="25" lean-forward="true" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="89" column="14" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="14" />
-          <folding>
-            <element signature="e#22#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/data2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/dataMigrate2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="71" column="31" lean-forward="true" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -788,51 +677,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://E:/tool/python/install27_32/Lib/site-packages/PIL/Image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2616">
-          <caret line="1861" column="39" selection-start-line="1861" selection-start-column="12" selection-end-line="1861" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/createTable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app.log" />
     <entry file="file://$PROJECT_DIR$/utils/redisUtils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appTest/testOracleData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -846,23 +695,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrateLogic.py">
+    <entry file="file://$PROJECT_DIR$/appTest/testOracleData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2698">
-          <caret line="153" column="41" selection-start-line="153" selection-start-column="41" selection-end-line="153" selection-end-column="41" />
-          <folding>
-            <element signature="e#22#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="17" column="119" selection-start-line="17" selection-start-column="119" selection-end-line="17" selection-end-column="119" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appLogic.py">
+    <entry file="file://$PROJECT_DIR$/gun.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4959">
-          <caret line="268" column="41" selection-start-line="268" selection-start-column="41" selection-end-line="268" selection-end-column="41" />
-          <folding>
-            <element signature="e#22#56#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConnectionPool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appTest/testMigrate/migrate0_1.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appTest/testMigrate/migrate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appTest/testMigrate/result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -873,45 +751,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ConnectionPool.py">
+    <entry file="file://$PROJECT_DIR$/enterData/createTable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="121" lean-forward="true" selection-start-line="6" selection-start-column="121" selection-end-line="6" selection-end-column="121" />
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enterData/dataMigrate.py">
+    <entry file="file://$PROJECT_DIR$/enterData/test/testOracle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3572">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="741">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/appTest/thrumbnailTest.py" />
+    <entry file="file://$PROJECT_DIR$/appTest/180625140248.jpg" />
+    <entry file="file://$PROJECT_DIR$/appTest/180625140248_40_40.jpg" />
+    <entry file="file://$PROJECT_DIR$/appTest/thumbImg/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appTest/thumbImg/1_40_40.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appendOperate/000020_60_60.tif" />
+    <entry file="file://$PROJECT_DIR$/appendOperate/000020.tif" />
+    <entry file="file://$PROJECT_DIR$/appendOperate/000021.tif" />
+    <entry file="file://$PROJECT_DIR$/utils/imgUtils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="140" column="27" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="27" />
+        <state relative-caret-position="323">
+          <caret line="59" column="32" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterData/dataMigrate3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" selection-start-line="16" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appendOperate/del.log" />
+    <entry file="file://$PROJECT_DIR$/appendOperate/delCase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
           <folding>
             <element signature="e#22#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.py">
+    <entry file="file://$PROJECT_DIR$/enterData/data2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="397">
+          <caret line="108" column="13" selection-start-line="108" selection-end-line="108" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterData/dataMigrate2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/ImagePathUtils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="151">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appendOperate/del.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="56" lean-forward="true" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1565719173/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="2186" column="7" selection-start-line="2186" selection-start-column="7" selection-end-line="2186" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appendOperate/test/appendThumbTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
-            <element signature="e#1811#6523#0" />
-            <element signature="e#4022#6455#0" />
-            <element signature="e#6547#8998#0" />
+            <element signature="e#22#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/tool/python/install27_32/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="2052" column="23" selection-start-line="2052" selection-start-column="23" selection-end-line="2052" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5947">
+          <caret line="321" column="31" selection-start-line="296" selection-end-line="321" selection-end-column="31" />
+          <folding>
+            <element signature="e#22#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appendOperate/appendThumb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="45" column="48" selection-start-line="40" selection-start-column="12" selection-end-line="45" selection-end-column="48" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrateLogic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#22#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterData/dataMigrate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="10" />
+          <folding>
+            <element signature="e#22#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appTest/testWSDL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#22#35#0" expanded="true" />
+            <element signature="e#639#1067#0" />
+            <element signature="e#1139#1239#0" />
+            <element signature="e#1306#4921#0" />
+            <element signature="e#4998#5883#0" />
+            <element signature="e#5950#7274#0" />
+            <element signature="e#7343#9750#0" />
           </folding>
         </state>
       </provider>

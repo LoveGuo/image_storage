@@ -48,12 +48,6 @@ def handle_invalid_usage(error):
     return response
 
 
-@app.route("/hello")
-def hello():
-    time.sleep(10)
-    return "hello!"
-
-
 @app.route('/upload',methods=['POST'])
 def uploadXMLCase():
     '''
@@ -63,6 +57,7 @@ def uploadXMLCase():
         将生成的json保存到redis中
         公告图以最后一个fid为准
     :return:
+    同一案件该接口支持重复入库
     '''
     #1.获取ftp列表json
     jsonData = request.get_json()
@@ -269,6 +264,7 @@ def modifyTree():
         out['success'] = False
         out['message'] = 'params is None'
         raise InvalidUsage('params is None',status_code=401)
+    logger.info("/tree/modify , shenqingh: " + str(shenqingh) + str(jsonData))
     jsonData = json.loads(jsonData)
     ImagePathUtils.currentPreffixHandle(jsonData,'clearPrefix')
     json_str = json.dumps(jsonData,ensure_ascii=False,encoding='utf-8')
@@ -433,6 +429,7 @@ def uploadAuthImgs():
     "urltype":"0",//文件获取方式 0-ftp方式获取
     "submitDate":"TIJIAORQ"
     }
+    同一案件该接口不能重复
     '''
     case = request.get_json()
     if appLogic.validCase(case) == 0:

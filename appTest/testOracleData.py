@@ -15,11 +15,7 @@ def getDate():
     :return:
     '''
     cursor = conn.cursor()
-    sql = "select count(shenqingh) from gg_zlx_zhu where zhuanlilx='3' and youxiaobj='0' and shenqingr>='20090101'"
-    cursor.execute(sql)
-    result1 = cursor.fetchone()
-    print "result1: " + str(result1)
-    sql2 = "select count(distinct shenqingh) from gg_zlx_zhu where zhuanlilx='3' and youxiaobj='0' and shenqingr>='20090101'"
+    sql2 = "select count(distinct shenqingh) from gg_zlx_zhu where zhuanlilx='3' and youxiaobj='0' and shenqingr>='20170101'"
     cursor.execute(sql2)
     result2 = cursor.fetchone()
     print "result1: " + str(result2)

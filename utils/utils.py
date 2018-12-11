@@ -118,5 +118,6 @@ def getKey(shenqingh,documentType,cate=''):
     return key
 
 
+
 if __name__=="__main__":
     print getBasePath("201830064781X","130001",'20170707')

@@ -69,9 +69,9 @@ def loaddata():
 
 
 def getCurrentData():
-    url = 'http://10.75.13.114:5000/getCurrentData'
+    url = 'http://10.50.167.112:5000/getCurrentData'
     data = {
-        'shenqingh': "201830198902X",
+        'shenqingh': "2014300075564",
         'wenjianlx': '130001'
     }
     res = requests.post(url, data)
